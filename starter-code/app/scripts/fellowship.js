@@ -25,9 +25,36 @@ var body = document.querySelector('body');
 
 function makeMiddleEarth() {
   // create a section tag with an id of middle-earth
+
+var midearth = document.createElement("section");
+  midearth.id = "middle-earth";
+  console.log(midearth);
+
   // inside, add each land as an article tag
+
+for (var i = 0; i < lands.length; i++) {
+  var land = document.createElement("article");
+  midearth.appendChild(land);
+  console.log(land);
+
+
   // inside each article tag include an h1 with the name of the land
+
+
+var header1 = document.createElement("h1");
+land.appendChild(header1);
+header1.insertHTML(lands); text = "lands";
+
+}
+
+
+
+
   // append middle-earth to your document body
+  
+ 
+  
+
 }
 
 makeMiddleEarth();
@@ -129,4 +156,8 @@ function thereAndBackAgain() {
   // remove Gollum and the Ring from the document
   // remove all the baddies from the document
   // Move all the hobbits back to the shire
+
+
+
+
 }
