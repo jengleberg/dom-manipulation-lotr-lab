@@ -59,7 +59,7 @@ makeMiddleEarth();
 
 var theShire = body.querySelectorAll('article')[0];
 var rivendell = body.querySelectorAll('article')[1];
-var modor = body.querySelectorAll('article')[2];
+var mordor = body.querySelectorAll('article')[2];
 
 function makeHobbits() {
   // display an unordered list of hobbits in the shire (which is the first article tag on the page)
@@ -94,7 +94,10 @@ function keepItSecretKeepItSafe() {
   // give the div a class of 'magic-imbued-jewelry'
   theRing.className = "magic-imbued-jewelry";
   // add an event listener so that when a user clicks on the ring, the nazgulScreech function (provided) is invoked
-  theRing.addEventListener('click', "nazgulScreech");
+  theRing.addEventListener('click', nazgulScreech);
+    function nazgulScreech() {
+      document.getElementById("nazgul-screech").play();
+    }
   // add the ring as a child of Frodo
   frodo.appendChild(theRing);
 }
@@ -132,7 +135,8 @@ function beautifulStranger() {
 
 beautifulStranger();
 
-// Part 6
+// Part 6 
+var hobbits = theShire.querySelector('ul');
 
 function leaveTheShire() {
   // assemble the hobbits and move them to Rivendell
